@@ -46,7 +46,7 @@ class BookAuthorController extends Controller
     public function update(Request $request, string $id)
     {
         //
-        $bookAuthor = BookAuthor::findOrFail($request->id);
+        $bookAuthor = BookAuthor::findOrFail($request->book_author);
         $bookAuthor->book_id = $request->book_id;
         $bookAuthor->author_id = $request->author_id;
         $bookAuthor->save();

@@ -46,7 +46,7 @@ class AuthorController extends Controller
     public function update(Request $request, string $id)
     {
         //
-        $author = Author::findOrFail($request->id);
+        $author = Author::findOrFail($request->author);
         $author->name = $request->name;
         $author->save();
         return $author;
